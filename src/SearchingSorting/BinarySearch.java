@@ -68,6 +68,7 @@ public class BinarySearch {
         BinarySearch b=new BinarySearch();
         System.out.println( b.getElementItr(new int[]{1,2,7,14,55,56,70},0,6,70));
 
+
     }
 
 
