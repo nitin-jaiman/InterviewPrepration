@@ -46,10 +46,13 @@ public class QuickSelection {
         else {
 
            int a= getKthElement(v, l, pIndex - 1, k);
-            int b=getKthElement(v, pIndex + 1, r, k);
+            if(a==-1) {
+                int b = getKthElement(v, pIndex + 1, r, k);
+            if(b!=-1){
+                return b;
+            }else{return -1;}
 
-            return Math.max(a,b);
-
+            }else{return a;}
         }
 
 
@@ -61,6 +64,7 @@ public class QuickSelection {
 
         QuickSelection q=new QuickSelection();
         System.out.println(q.getKthElement(new int[]{7, 10, 4, 3, 20, 15},0,5,3));
+
 
 
 
