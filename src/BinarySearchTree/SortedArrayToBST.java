@@ -9,7 +9,7 @@ import Tree.TreeTraversal;
 public class SortedArrayToBST {
 
 
-    int arr[]=new int[]{1,2,3,4,5,6,7};
+    int arr[]=new int[]{1,2,3,4,5,6};
 
     /**
      * http://www.geeksforgeeks.org/sorted-array-to-balanced-bst/
@@ -20,12 +20,19 @@ public class SortedArrayToBST {
      */
     public Node sortedArrayToBST(int st,int en){
 
+        if (en < st) {
+            return null;
+        }
+
+
+
         if(st==en){
 
             Node n=new Node(""+arr[st]);
             return n;
 
         }
+
 
 
         int mIndex=(st+en)/2;
@@ -43,7 +50,7 @@ public class SortedArrayToBST {
 
 
 
-        Node root=new SortedArrayToBST().sortedArrayToBST(0,6);
+        Node root=new SortedArrayToBST().sortedArrayToBST(0,5);
         new TreeTraversal().inOrder(root);
     }
 

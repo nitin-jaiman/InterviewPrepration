@@ -22,6 +22,16 @@ public class Node {
 
     private int level;
 
+    public int getLeftSize() {
+        return leftSize;
+    }
+
+    public void setLeftSize(int leftSize) {
+        this.leftSize = leftSize;
+    }
+
+    private int leftSize;
+
 
     /**
      * String value of the node
